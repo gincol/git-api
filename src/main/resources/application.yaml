@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: '@project.artifactId@'
+       
+management:
+  metrics:
+    tags:
+      application: '@project.artifactId@'
+  endpoints:
+    web:
+      exposure:
+        include:
+        - health
+        - info
+        - prometheus
+  health:  
+    probes:
+      enabled: true
